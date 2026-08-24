@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE UNIT — Press Kit</title>
+<meta name="description" content="THE UNIT — underground rap collective. Official electronic press kit.">
+<link rel="icon" href="assets/star.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --red: #c21e2e;
+    --red-dark: #7d1420;
+    --cream: #f3ecdd;
+    --cream-dim: #e7ddc7;
+    --ink: #0b0b0c;
+    --ink-soft: #17171a;
+    --navy: #1f3c73;
+    --line: rgba(11,11,12,0.14);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    margin:0;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--red);
+  }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- star mark ---------- */
+  .star-mark{
+    width:18px; height:18px;
+    display:inline-block;
+    background-image:url('assets/star.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    vertical-align:middle;
+  }
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--cream);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav-inner{
+    max-width:1080px; margin:0 auto; padding:14px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-brand{
+    display:flex; align-items:center; gap:8px;
+    font-family:'Anton', sans-serif;
+    font-size:1.05rem;
+    letter-spacing:0.04em;
+  }
+  .nav-links{
+    display:flex; gap:22px;
+    list-style:none; margin:0; padding:0;
+    font-size:0.72rem; font-weight:600;
+    letter-spacing:0.14em; text-transform:uppercase;
+  }
+  .nav-links a{ text-decoration:none; opacity:0.7; transition:opacity .15s; }
+  .nav-links a:hover{ opacity:1; color:var(--red); }
+  .nav-toggle{ display:none; }
+
+  /* ---------- zigzag divider (stitched edge) ---------- */
+  .stitch{
+    height:14px;
+    background:var(--ink);
+    clip-path: polygon(
+      0% 0%, 3.33% 100%, 6.66% 0%, 10% 100%, 13.33% 0%, 16.66% 100%,
+      20% 0%, 23.33% 100%, 26.66% 0%, 30% 100%, 33.33% 0%, 36.66% 100%,
+      40% 0%, 43.33% 100%, 46.66% 0%, 50% 100%, 53.33% 0%, 56.66% 100%,
+      60% 0%, 63.33% 100%, 66.66% 0%, 70% 100%, 73.33% 0%, 76.66% 100%,
+      80% 0%, 83.33% 100%, 86.66% 0%, 90% 100%, 93.33% 0%, 96.66% 100%,
+      100% 0%
+    );
+  }
+  .stitch.red{ background:var(--red); }
+  .stitch.navy{ background:var(--navy); }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    background:var(--ink);
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:url('assets/bandana-flag.jpeg');
+    background-size:cover;
+    background-position:center;
+    opacity:0.9;
+  }
+  .hero-veil{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,11,12,0.72) 0%, rgba(11,11,12,0.45) 38%, rgba(11,11,12,0.78) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    color:var(--cream);
+    padding:120px 24px 100px;
+  }
+  .hero .eyebrow{ color:#ffb4ab; }
+  .hero h1{
+    font-size:clamp(3.4rem, 12vw, 8.5rem);
+    line-height:0.92;
+    color:var(--cream);
+    margin:10px 0 14px;
+    text-shadow: 0 6px 26px rgba(0,0,0,0.45);
+  }
+  .hero-tag{
+    font-size:0.85rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    margin-bottom:26px;
+  }
+  .hero-handles{
+    display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
+    font-size:0.8rem; letter-spacing:0.08em;
+  }
+  .hero-handles span{
+    border:1px solid rgba(243,236,221,0.4);
+    padding:7px 14px;
+    border-radius:999px;
+  }
+  .scroll-cue{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+    z-index:2;
+    color:var(--cream-dim);
+    font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+    opacity:0.85;
+  }
+  .scroll-cue .star-mark{ width:12px; height:12px; animation: bob 1.8s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(6px);} }
+
+  /* ---------- section shells ---------- */
+  section{ padding:88px 0; }
+  .section-head{
+    display:flex; align-items:baseline; gap:14px;
+    margin-bottom:44px;
+  }
+  .section-head h2{ font-size:clamp(1.8rem, 4vw, 2.6rem); }
+  .section-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem; color:var(--red); font-weight:600;
+  }
+
+  /* ---------- bio ---------- */
+  .bio{ background:var(--cream); }
+  .bio-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.6fr;
+    gap:48px;
+    align-items:start;
+  }
+  .bio-mark{
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .bio-mark .star-mark{ width:56px; height:56px; }
+  .bio-mark p{
+    font-size:0.78rem; letter-spacing:0.05em; color:#4a4a4a; margin:0;
+  }
+  .bio-text p{
+    font-size:1.12rem;
+    line-height:1.75;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0 0 22px;
+  }
+  .bio-text p:first-letter{
+    color:var(--red);
+  }
+  .bio-text strong{
+    color:var(--red);
+    font-weight:600;
+  }
+
+  /* ---------- stats ---------- */
+  .stats{
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .stats .section-head h2{ color:var(--cream); }
+  .stats .section-num{ color:#ffb4ab; }
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:rgba(243,236,221,0.16);
+    border:1px solid rgba(243,236,221,0.16);
+  }
+  .stat{
+    background:var(--ink);
+    padding:38px 20px;
+    text-align:center;
+  }
+  .stat-num{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(2.1rem, 5vw, 3.1rem);
+    color:var(--cream);
+  }
+  .stat-label{
+    margin-top:8px;
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#b9b1a0;
+  }
+  .stats-note{
+    margin-top:22px;
+    font-size:0.72rem;
+    color:#9a9284;
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- media ---------- */
+  .media{ background:var(--cream); }
+  .media-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .media-slot{
+    aspect-ratio:4/5;
+    border:2px solid var(--ink);
+    background:
+      repeating-linear-gradient(135deg, rgba(11,11,12,0.05) 0 2px, transparent 2px 14px);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px;
+    position:relative;
+  }
+  .media-slot.wide{ grid-column:span 2; aspect-ratio:8/5; }
+  .media-slot .plus{
+    font-family:'Anton', sans-serif;
+    font-size:2.6rem;
+    color:var(--ink);
+    opacity:0.35;
+    line-height:1;
+  }
+  .media-slot .cap{
+    font-size:0.66rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#6b6b6b;
+    text-align:center;
+    padding:0 14px;
+  }
+  .media-slot .tag{
+    position:absolute; top:10px; left:10px;
+    font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase;
+    background:var(--ink); color:var(--cream);
+    padding:3px 8px;
+  }
+
+  /* ---------- links ---------- */
+  .links{ background:var(--navy); color:var(--cream); }
+  .links .section-head h2{ color:var(--cream); }
+  .links .section-num{ color:#a9c1ff; }
+  .link-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:16px;
+  }
+  .link-card{
+    display:flex; flex-direction:column; gap:10px;
+    padding:24px 20px;
+    border:1px solid rgba(243,236,221,0.35);
+    text-decoration:none;
+    color:var(--cream);
+    transition: background .15s, transform .15s;
+  }
+  .link-card:hover{ background:rgba(243,236,221,0.08); transform:translateY(-3px); }
+  .link-plat{ font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:#a9c1ff; }
+  .link-name{ font-family:'Anton', sans-serif; font-size:1.15rem; }
+  .link-arrow{ font-size:0.85rem; opacity:0.7; }
+
+  /* ---------- management / contact ---------- */
+  .mgmt{
+    position:relative;
+    color:var(--cream);
+    overflow:hidden;
+  }
+  .mgmt-bg{
+    position:absolute; inset:0;
+    background-image:url('assets/blue-flag.jpeg');
+    background-size:cover;
+    background-position:center;
+  }
+  .mgmt-veil{
+    position:absolute; inset:0;
+    background:rgba(11,11,12,0.82);
+  }
+  .mgmt-inner{ position:relative; z-index:2; }
+  .mgmt-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:start;
+  }
+  .mgmt h2{ font-size:clamp(1.8rem,4vw,2.6rem); color:var(--cream); margin-bottom:14px; }
+  .mgmt p{ color:var(--cream-dim); font-size:0.92rem; max-width:44ch; }
+  .contact-list{ list-style:none; margin:0; padding:0; }
+  .contact-list li{
+    border-top:1px solid rgba(243,236,221,0.2);
+    padding:16px 0;
+    display:flex; justify-content:space-between; gap:16px;
+    font-size:0.85rem;
+  }
+  .contact-list li:last-child{ border-bottom:1px solid rgba(243,236,221,0.2); }
+  .contact-label{ color:#b9b1a0; letter-spacing:0.1em; text-transform:uppercase; font-size:0.68rem; align-self:center; }
+  .contact-value{ font-weight:600; text-align:right; }
+  .contact-value a{ text-decoration:none; border-bottom:1px solid rgba(243,236,221,0.4); }
+
+  footer{
+    background:var(--ink);
+    color:#8a8378;
+    text-align:center;
+    padding:26px 20px;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+  }
+  footer .star-mark{ width:12px; height:12px; margin:0 8px; opacity:0.8; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px){
+    .bio-grid, .mgmt-grid{ grid-template-columns:1fr; gap:28px; }
+    .stat-grid{ grid-template-columns:repeat(2,1fr); }
+    .link-grid{ grid-template-columns:repeat(2,1fr); }
+    .media-grid{ grid-template-columns:repeat(2,1fr); }
+    .media-slot.wide{ grid-column:span 2; }
+    .nav-links{ display:none; }
+  }
+  @media (max-width: 520px){
+    .stat-grid{ grid-template-columns:1fr 1fr; }
+    .media-grid{ grid-template-columns:1fr; }
+    .media-slot.wide{ grid-column:span 1; }
+    .link-grid{ grid-template-columns:1fr; }
+    .contact-list li{ flex-direction:column; gap:4px; }
+    .contact-value{ text-align:left; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .scroll-cue .star-mark{ animation:none; }
+    .link-card{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="star-mark"></span> THE UNIT</div>
+    <ul class="nav-links">
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#links">Listen</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Underground Rap Collective</div>
+    <h1>The&nbsp;Unit</h1>
+    <div class="hero-tag">Press &amp; Partnership Kit — 2026</div>
+    <div class="hero-handles">
+      <span>@unitmp4</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="star-mark"></span>Scroll</div>
+</header>
+
+<div class="stitch"></div>
+
+<section class="bio" id="bio">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>The Bio</h2>
+    </div>
+    <div class="bio-grid">
+      <div class="bio-mark">
+        <span class="star-mark" style="width:56px;height:56px;"></span>
+        <p>THREE VOICES.<br>ONE MOVEMENT.<br>NOT JUST A GROUP.</p>
+      </div>
+      <div class="bio-text">
+        <p>The Unit is a collective of rappers who came together to create something bigger than any one of us. We're building more than a fanbase, we're building a <strong>movement</strong>. A place where people can find community and stand in solidarity with each other.</p>
+        <p>Every member brings their own voice, their own style, their own story, but we all move with the same purpose. That's what makes us a <strong>Unit</strong> and not just a group.</p>
+        <p>When you're with The Unit, you're not just listening to the music — you're part of the movement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch red"></div>
+
+<section class="stats" id="stats">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>By The Numbers</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-num">40K+</div>
+        <div class="stat-label">Monthly&nbsp;Listeners</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5M+</div>
+        <div class="stat-label">Total&nbsp;Streams</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1M+</div>
+        <div class="stat-label">IG&nbsp;+&nbsp;TikTok&nbsp;Views</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">23K+</div>
+        <div class="stat-label">Followers,&nbsp;All&nbsp;Platforms</div>
+      </div>
+    </div>
+    <div class="stats-note">Figures current as of August 2026</div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<section class="media" id="media">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Photo &amp; Video</h2>
+    </div>
+    <div class="media-grid">
+      <div class="media-slot wide">
+        <span class="tag">Hero</span>
+        <div class="plus">+</div>
+        <div class="cap">Drop lead press photo here<br>(1600×1000, .jpg/.png)</div>
+      </div>
+      <div class="media-slot">
+        <span class="tag">Photo</span>
+        <div class="plus">+</div>
+        <div class="cap">Group / editorial</div>
+      </div>
+      <div class="media-slot">
+        <span class="tag">Photo</span>
+        <div class="plus">+</div>
+        <div class="cap">Live / performance</div>
+      </div>
+      <div class="media-slot">
+        <span class="tag">Video</span>
+        <div class="plus">▶</div>
+        <div class="cap">Music video embed</div>
+      </div>
+      <div class="media-slot">
+        <span class="tag">Video</span>
+        <div class="plus">▶</div>
+        <div class="cap">Reel / behind-the-scenes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch navy"></div>
+
+<section class="links" id="links">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2>Listen &amp; Follow</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="link-plat">Stream</span>
+        <span class="link-name">Spotify</span>
+        <span class="link-arrow">↗ add link</span>
+      </a>
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="link-plat">Stream</span>
+        <span class="link-name">SoundCloud</span>
+        <span class="link-arrow">↗ add link</span>
+      </a>
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="link-plat">Follow</span>
+        <span class="link-name">Instagram</span>
+        <span class="link-arrow">https://instagram.com/unitmp4</span>
+      </a>
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="link-plat">Watch</span>
+        <span class="link-name">YouTube</span>
+        <span class="link-arrow">↗ add link</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="mgmt" id="contact">
+  <div class="mgmt-bg"></div>
+  <div class="mgmt-veil"></div>
+  <div class="mgmt-inner wrap">
+    <div class="section-head">
+      <span class="section-num" style="color:#a9c1ff;">05</span>
+      <h2>Management &amp; Contact</h2>
+    </div>
+    <div class="mgmt-grid">
+      <div>
+        <p>For press, bookings, and brand partnership inquiries, reach out directly. We respond fastest by email.</p>
+      </div>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Management/PR</span>
+          <span class="contact-value">Akosua Johnson</span>
+        </li>
+        <li>
+          <span class="contact-label">aj1kkmanagement@gmail.com</span>
+          <span class="contact-value"><a href="mailto:press@theunit.example">aj1kkmanagement@gmail.com</a></span>
+        </li>
+        <li>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-value"><a href="https://instagram.com/unitmp4" target="_blank" rel="noopener">@unitmp4</a></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  THE UNIT <span class="star-mark"></span> Press Kit 2026 <span class="star-mark"></span> Not Just A Group
+</footer>
+
+</body>
+</html>
