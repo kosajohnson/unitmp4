@@ -344,7 +344,6 @@
   @media (max-width: 860px){
     .bio-grid, .mgmt-grid{ grid-template-columns:1fr; gap:28px; }
     .stat-grid{ grid-template-columns:repeat(2,1fr); }
-    .link-grid{ grid-template-columns:repeat(2,1fr); }
     .media-grid{ grid-template-columns:repeat(2,1fr); }
     .media-slot.wide{ grid-column:span 2; }
     .nav-links{ display:none; }
@@ -353,7 +352,6 @@
     .stat-grid{ grid-template-columns:1fr 1fr; }
     .media-grid{ grid-template-columns:1fr; }
     .media-slot.wide{ grid-column:span 1; }
-    .link-grid{ grid-template-columns:1fr; }
     .contact-list li{ flex-direction:column; gap:4px; }
     .contact-value{ text-align:left; }
   }
@@ -361,7 +359,6 @@
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     .scroll-cue .star-mark{ animation:none; }
-    .link-card{ transition:none; }
   }
 </style>
 </head>
@@ -456,18 +453,27 @@
     <div class="media-grid">
       <div class="media-slot wide">
         <span class="tag">IG - @unitmp4</span>
-        <div class="plus">▶</div>
-        <div class="cap">https://www.instagram.com/reel/DcRt8a_O4Ef/?igsi=a2R0aWE3eHl4YXNh</div>
+        <blockquote 
+          class="instagram-media" 
+          data-instgrm-permalink="https://www.instagram.com/reel/DcRt8a_O4Ef/?utm_source=ig_embed&amp;utm_campaign=loading" 
+          data-instgrm-version="14">
+        </blockquote>
       </div>
       <div class="media-slot">
         <span class="tag">IG - @aj1kkk</span>
-        <div class="plus">▶</div>
-        <div class="cap">https://www.instagram.com/reel/Da56rPEuSUh/?igsi=MXBlMHZuYmI0NnhlcQ==</div>
+        <blockquote 
+          class="instagram-media" 
+          data-instgrm-permalink="https://www.instagram.com/reel/DNYykXjuGRq/?utm_source=ig_embed&amp;utm_campaign=loading" 
+          data-instgrm-version="14">
+        </blockquote>
       </div>
       <div class="media-slot">
         <span class="tag">IG - @ph0nebangin</span>
-        <div class="plus">▶</div>
-        <div class="cap">https://www.instagram.com/reel/DcPUMJbSl8M/?igsi=MTVsanFxemdjNmFqag==</div>
+        <blockquote 
+          class="instagram-media" 
+          data-instgrm-permalink="https://www.instagram.com/reel/DcPUMJbSl8M/?utm_source=ig_embed&amp;utm_campaign=loading" 
+          data-instgrm-version="14">
+        </blockquote>
       </div>
       <div class="media-slot">
         <span class="tag">Youtube - </span>
@@ -490,7 +496,7 @@
   <div class="mgmt-veil"></div>
   <div class="mgmt-inner wrap">
     <div class="section-head">
-      <span class="section-num" style="color:#a9c1ff;">05</span>
+      <span class="section-num" style="color:#a9c1ff;">04</span>
       <h2>The Contact</h2>
     </div>
     <div class="mgmt-grid">
@@ -519,5 +525,7 @@
   THE UNIT <span class="star-mark"></span> Press Kit 2026 <span class="star-mark"></span> A MOVEMENT
 </footer>
 
+<script async src="//www.instagram.com/embed.js"></script>
+  
 </body>
 </html>
