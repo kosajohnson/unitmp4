@@ -264,14 +264,17 @@
   }
 
   /* ---------- media ---------- */
+  
   .media{ background:var(--cream); }
+    
   .media-grid{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, minmax(0, 1fr));
     gap:18px;
   }
 
   .media-slot{
+    min-width:0;
     border:2px solid var(--ink);
     background:
       repeating-linear-gradient(135deg, rgba(11,11,12,0.05) 0 2px, transparent 2px 14px);
@@ -279,8 +282,18 @@
     gap:10px;
     position:relative;
     padding:10px;
+    overflow:hidden;
   }
-
+  
+  .media-slot iframe{
+    width:100%;
+    max-width:100%
+    aspect-ratio:16/9;
+    height:auto;
+    display:block;
+    border:0;
+  }
+  
   .media-slot .instagram-media{
     margin:0 auto !important;
     width:100% !important;
@@ -469,19 +482,19 @@
     <div class="media-grid">
       <div class="media-slot">
         <span class="tag">YT - sakesa midnight</span>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/l-q6Nr0CUcY?si=9w2I6zKPxTVUTzi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/l-q6Nr0CUcY?si=9w2I6zKPxTVUTzi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="media-slot">
         <span class="tag">YT - EERIE WSP CHAT</span>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JuSAMFQajFc?si=yoIOM4BOoIQgV_Xw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/JuSAMFQajFc?si=yoIOM4BOoIQgV_Xw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="media-slot">
         <span class="tag">YT - sakesa MOVE OUT</span>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LO_eO9-HRH4?si=ngMbII5TQdEKdM96" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/LO_eO9-HRH4?si=ngMbII5TQdEKdM96" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="media-slot">
         <span class="tag">YT - sakesa and dj santkou on the radar</span>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/afEWmxA8R8E?si=vr4c8KJ5QBOSbdU2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/afEWmxA8R8E?si=vr4c8KJ5QBOSbdU2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </div>
